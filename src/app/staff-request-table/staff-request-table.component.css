@@ -1,0 +1,26 @@
+
+  .container_table {
+    width: 800px;
+    margin: 0 auto;
+    border: 5px solid cadetblue;
+    border-radius: 40px;
+    margin-top: 40px;
+  }
+  
+  mat-table {
+    border-collapse: separate;
+    border: 5px ;
+    border-radius: 40px;
+    background-color: transparent;
+  }
+  
+  mat-cell {
+    color: #fff;
+  }
+  
+  mat-header-cell,
+  mat-label{
+      color: cadetblue;
+  }
+
+  

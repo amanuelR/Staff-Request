@@ -1,0 +1,106 @@
+<div class="container_form">
+  <h2>Staff Request Form</h2>
+  <form
+    [formGroup]="staffRequestForm"
+    (ngSubmit)="onSubmit()"
+    #formDirective="ngForm"
+  >
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" [min]="today"/>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="staffRequestForm.get('date')?.hasError('required')"
+        >Please select a date</mat-error
+      >
+      <mat-error *ngIf="staffRequestForm.get('date')?.hasError('invalidDate')"
+        >Date cannot be in the past</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Job Title</mat-label>
+      <input matInput formControlName="jobTitle" placeholder="Job Title" />
+      <mat-error
+        *ngIf="
+          staffRequestForm.get('jobTitle')?.invalid &&
+          (staffRequestForm.get('jobTitle')?.dirty ||
+            staffRequestForm.get('jobTitle')?.touched)
+        "
+        >Please enter a job title</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="department">
+        <mat-option value="HR">HR</mat-option>
+        <mat-option value="Software Development"
+          >Software Development</mat-option
+        >
+        <mat-option value="Marketing">Marketing</mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          staffRequestForm.get('department')?.invalid &&
+          (staffRequestForm.get('department')?.dirty ||
+            staffRequestForm.get('department')?.touched)
+        "
+      >
+        Please select a department
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Hiring Manager Name</mat-label>
+      <input
+        matInput
+        formControlName="hiringManagerName"
+        placeholder="Hiring Manager Name"
+      />
+      <mat-error
+        *ngIf="
+          staffRequestForm.get('hiringManagerName')?.invalid &&
+          (staffRequestForm.get('hiringManagerName')?.dirty ||
+            staffRequestForm.get('hiringManagerName')?.touched)
+        "
+        >Please enter a hiring manager name</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Hiring Manager Email</mat-label>
+      <input
+        matInput
+        formControlName="hiringManagerEmail"
+        placeholder="Hiring Manager Email"
+      />
+      <mat-error
+        *ngIf="
+          staffRequestForm.get('hiringManagerEmail')?.invalid &&
+          (staffRequestForm.get('hiringManagerEmail')?.dirty ||
+            staffRequestForm.get('hiringManagerEmail')?.touched)
+        "
+      >
+        <span
+          *ngIf="staffRequestForm.get('hiringManagerEmail')?.errors?.['required']"
+          >Please enter an email address</span
+        >
+        <span
+          *ngIf="staffRequestForm.get('hiringManagerEmail')?.errors?.['email']"
+          >Please enter a valid email address</span
+        >
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      [disabled]="staffRequestForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
