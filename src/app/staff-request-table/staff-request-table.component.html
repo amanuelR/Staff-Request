@@ -1,6 +1,6 @@
 <!-- Display form data when submitted -->
-<div class="container_table">
-    <mat-table *ngIf="isFormSubmitted" [dataSource]="dataSource">
+<div class="container_table" *ngIf="isFormSubmitted">
+    <mat-table [dataSource]="dataSource">
       <!-- Date column -->
       <ng-container matColumnDef="date">
         <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
