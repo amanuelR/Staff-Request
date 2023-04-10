@@ -16,7 +16,10 @@ form {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34586598624780aeec1106eaef8679658dfd0eee
 h2 {
   text-align: center;
   margin-top: 20px;
@@ -51,6 +54,7 @@ button[type="submit"] {
   transition: background-color 0.2s ease-in-out;
   align-self: center;
 }
+<<<<<<< HEAD
 
 @media (max-width: 599px) {
   /* Styles for small screens */
@@ -66,3 +70,5 @@ button[type="submit"] {
     max-width: 100%;
   }
 }
+=======
+>>>>>>> 34586598624780aeec1106eaef8679658dfd0eee

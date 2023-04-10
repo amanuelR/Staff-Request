@@ -23,6 +23,7 @@
       color: cadetblue;
   }
 
+<<<<<<< HEAD
   @media (max-width: 599px) {
     /* Styles for small screens */
     .container_table {
@@ -34,3 +35,6 @@
       max-width: 100%;
     }
   }
+=======
+  
+>>>>>>> 34586598624780aeec1106eaef8679658dfd0eee
