@@ -26,11 +26,11 @@
   @media (max-width: 599px) {
     /* Styles for small screens */
     .container_table {
-      max-width: 100%;
+      max-width: 90%;
       padding: 10px;
     }
 
     mat-table{
-      max-width: 100%;
+      max-width: 90%;
     }
   }
