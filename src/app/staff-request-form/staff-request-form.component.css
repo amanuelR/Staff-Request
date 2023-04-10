@@ -61,6 +61,6 @@ button[type="submit"] {
     margin-bottom: 10px;
   }
   form{
-    max-width: 100%;
+    max-width: 80%;
   }
 }
