@@ -53,7 +53,7 @@ button[type="submit"] {
 @media (max-width: 599px) {
   /* Styles for small screens */
   .container_form {
-    max-width: 00%;
+    max-width: 90%;
     padding: 10px;
     height: max-content;
   }
